@@ -4,6 +4,7 @@ This could be used as a base for any new AWS CDK project. It uses Docker dind as
  * nodejs
  * npm
  * Go
+ * AWS CLI
 
 It runs in a privileged mode due to use of docker inside the docker container. This allows CDK 
 to build and publish docker images or synthesis Lambda's container runtime.
@@ -13,7 +14,7 @@ to build and publish docker images or synthesis Lambda's container runtime.
 There is a `makefile` at the root of this project, this would make running `docker-compose.yml` 
 easier.
 
- * `make build`: Builds docker images _(it ignores cached image & existing container)_
+ * `make`: Builds docker images _(it ignores cached image & existing container)_
  * `make up`: Creates and runs docker container for `cdk`
  * `make down`: Stops & Removes `cdk` container
  * `make cdk`: Enter `cdk` container
