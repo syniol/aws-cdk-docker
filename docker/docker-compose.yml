@@ -9,7 +9,7 @@ services:
     privileged: true
     tty: true
     volumes:
-      - "../:/usr/local/cdk"
+      - "../../:/usr/local/cdk"
     networks:
       - local_syniol_cdk_net
 
