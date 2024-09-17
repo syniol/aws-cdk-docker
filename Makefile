@@ -1,11 +1,11 @@
 build:
-	docker-compose -f docker/docker-compose.yml build --no-cache
+	docker-compose -f docker-compose.yml build --no-cache
 
 up:
-	docker-compose -f docker/docker-compose.yml up -d
+	docker-compose -f docker-compose.yml up -d
 
 down:
-	docker-compose -f docker/docker-compose.yml down
+	docker-compose -f docker-compose.yml down
 
 cdk:
-	docker-compose -f docker/docker-compose.yml exec cdk sh
+	docker-compose -f docker-compose.yml exec cdk sh

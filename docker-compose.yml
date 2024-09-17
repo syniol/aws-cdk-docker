@@ -4,12 +4,12 @@ services:
     image: aws_cdk_syniol:latest
     container_name: aws_cdk_syniol
     build:
-      context: ..
-      dockerfile: docker/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     privileged: true
     tty: true
     volumes:
-      - "../../:/usr/local/cdk"
+      - "../:/usr/local/cdk"
     networks:
       - local_syniol_cdk_net
 
