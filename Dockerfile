@@ -8,7 +8,8 @@ RUN apk update && apk add \
     zip \
     curl \
     bash \
-    build-base
+    build-base \
+    groff
 
 # Install Golang
 RUN apk add go && go version
