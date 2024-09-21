@@ -37,3 +37,5 @@ cdk init app --language go
 
 #### Credits
  * [Hadi Tajallaei](mailto:hadi@syniol.com)
+
+Copyright &copy; 2024, Syniol Limited. All rights reserved.
