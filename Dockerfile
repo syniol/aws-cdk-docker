@@ -14,16 +14,21 @@ RUN apk update && apk add \
 # Install Golang
 RUN apk add go && go version
 
-# Install Nodejs, NPM, and AWS CDK CLI
+# Install node.js and npm (Node Package Manager)
 RUN apk add \
     nodejs \
     npm
-RUN npm install -g \
-    npm@latest \
-    aws-cdk@latest
+
+# Updating npm (Node Package Manager)
+RUN npm install -g npm@latest
+
+# Installing AWS CDK CLI
+RUN npm install -g aws-cdk@latest \
+    && cdk --version
 
 # Install AWS CLI
-RUN apk add aws-cli && aws --version
+RUN apk add aws-cli \
+    && aws --version
 
 # Creating a Volume & Directory for CDK Project
 RUN mkdir -p /usr/local/cdk
