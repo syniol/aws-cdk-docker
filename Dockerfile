@@ -9,10 +9,8 @@ RUN apk update && apk add \
     curl \
     bash \
     build-base \
+    git \
     groff
-
-# Install Golang
-RUN apk add go && go version
 
 # Install node.js and npm (Node Package Manager)
 RUN apk add \
@@ -29,6 +27,15 @@ RUN npm install -g aws-cdk@latest \
 # Install AWS CLI
 RUN apk add aws-cli \
     && aws --version
+
+# Install Golang
+RUN apk add go && go version
+
+# Install .NET SDK and Runtime
+RUN apk add dotnet6-sdk aspnetcore6-runtime
+
+# Install Maven (Java Package Manager)
+RUN apk add maven
 
 # Creating a Volume & Directory for CDK Project
 RUN mkdir -p /usr/local/cdk
