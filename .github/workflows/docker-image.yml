@@ -16,6 +16,7 @@ jobs:
       - name: Build the Docker image
         run: |
           docker build . --file Dockerfile --tag syniol/aws-cdk:${{  github.ref_name }}
+          docker build . --file Dockerfile --tag syniol/aws-cdk:latest
           echo "OK!"
       - uses: docker/login-action@v3
         with:
