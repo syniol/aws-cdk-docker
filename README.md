@@ -1,13 +1,17 @@
 # AWS CDK Docker
-This could be used as a base for any new AWS CDK project. It uses Docker dind as a base image 
-& it includes a latest installation of following software:
+This could be used as a base for any new AWS CDK project. It uses Docker dind as a base image. It also 
+includes the installation of following software programs:
+
+ * AWS CLI
  * nodejs
  * npm
  * Go
- * AWS CLI
+ * Java
+ * .NET 6
+ * Python
 
 It runs in a privileged mode due to use of docker inside the docker container. This allows CDK 
-to build and publish docker images or synthesis Lambda's container runtime.
+to build and publish docker images or synthesis Lambda's container runtime inside the running container.
 
 
 ## Useful Makefile Commands
@@ -17,7 +21,8 @@ easier.
  * `make`: Builds docker images _(it ignores cached image & existing container)_
  * `make up`: Creates and runs docker container for `cdk`
  * `make down`: Stops & Removes `cdk` container
- * `make cdk`: Enter `cdk` container
+ * `make cdk`: Enters `cdk` container
+
 
 ## Useful CDK Commands
 Start a new CDK project using Golang inside the `cdk` container using `make cdk` and then you 
