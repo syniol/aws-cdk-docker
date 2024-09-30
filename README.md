@@ -1,4 +1,4 @@
-# AWS CDK Golang Docker Skeleton
+# AWS CDK Docker
 This could be used as a base for any new AWS CDK project. It uses Docker dind as a base image 
 & it includes a latest installation of following software:
  * nodejs
